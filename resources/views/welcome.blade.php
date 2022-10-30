@@ -12,6 +12,7 @@
 
     </head>
     <body class="antialiased">
-        <h1 class="text-3xl font-bold underline">Hello world</h1>
+        <div id="app"></div>
+        @vite('resources/js/app.js')
     </body>
 </html>
