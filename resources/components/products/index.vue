@@ -1,23 +1,49 @@
 <script setup>
-    import { onMounted, ref } from 'vue';
+import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
 
-    onMounted(async => {
-        getProducts()
-    })
+const router = new useRouter({});
+
+let products = ref([]);
+
+onMounted((async) => {
+    getProducts();
+});
+
+const createProduct = () => {
+    router.push("/product/create");
+};
+
+const getProducts = async () => {
+    let response = await axios.get("/api/get/products");
+    products.value = response.data.products;
+    console.log("products", products.value);
+};
+
+const showImage = (img) => {
+    return img;
+};
 </script>
 <template>
-    <div class="container">
-        <div class="products__list table my-3">
-            <div class="customers__titlebar dflex justify-content-between align-items-center">
+    <div class="flex items-center justify-center">
+        <div class="products__list table my-12">
+            <div
+                class="customers__titlebar dflex justify-content-between align-items-center"
+            >
                 <div class="customers__titlebar--item">
                     <h1 class="my-1">Products</h1>
                 </div>
                 <div class="customers__titlebar--item">
-                    <button class="btn btn-secondary my-1">Add Product</button>
+                    <button class="btn btn-secondary my-1" @click="createProduct">
+                        Add Product
+                    </button>
                 </div>
             </div>
 
-            <div class="table--heading mt-2 products__list__heading" style="padding-top: 20px; background: #fff">
+            <div
+                class="table--heading mt-2 products__list__heading"
+                style="padding-top: 20px; background: #fff"
+            >
                 <!-- <p class="table--heading--col1">&#32;</p> -->
                 <p class="table--heading--col1">image</p>
                 <p class="table--heading--col2">Product</p>
@@ -28,13 +54,23 @@
             </div>
 
             <!-- product 1 -->
-            <div class="table--items products__list__item">
+            <div
+                class="table--items products__list__item"
+                v-for="product in products"
+                :key="product.id"
+                v-if="products.length > 0"
+            >
                 <div class="products__list__item--imgWrapper">
-                    <img class="products__list__item--img" src="1.jpg" style="height: 40px" />
+                    <img
+                        class="products__list__item--img"
+                        :src="showImage(product.image)"
+                        style="height: 40px"
+                        v-if="product.image"
+                    />
                 </div>
-                <a href="# " class="table--items--col2"> Product name </a>
-                <p class="table--items--col2">type</p>
-                <p class="table--items--col3">10</p>
+                <p class="table--items--col2">{{ product.name }}</p>
+                <p class="table--items--col2">{{ product.type }}</p>
+                <p class="table--items--col3">{{ product.quantity }}</p>
                 <div>
                     <button class="btn-icon btn-icon-success">
                         <i class="fas fa-pencil-alt"></i>
@@ -43,6 +79,13 @@
                         <i class="far fa-trash-alt"></i>
                     </button>
                 </div>
+            </div>
+
+            <div
+                class="flex items-center justify-center p-5 bg-slate-400"
+                v-else
+            >
+                <p class="flex justify-center text-xl">No products found</p>
             </div>
         </div>
     </div>
