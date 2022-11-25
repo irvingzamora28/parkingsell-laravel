@@ -1,15 +1,15 @@
 <template>
-    <div class="container">
-        <div class="products__create ">
+    <div class="flex items-center justify-center">
+        <div class="products__create  w-1/2 my-12">
 
             <div class="products__create__titlebar dflex justify-content-between align-items-center">
                 <div class="products__create__titlebar--item">
 
-                    <h1 class="my-1">Add Product</h1>
+                    <button class="pointer-events-auto rounded-md bg-indigo-700 py-2 px-3 text-[0.8125rem] font-semibold leading-5 text-indigo-100 hover:bg-indigo-900 hover:text-indigo-100">Add Product</button>
                 </div>
                 <div class="products__create__titlebar--item">
 
-                    <button class="btn btn-secondary ml-1">
+                    <button class="pointer-events-auto rounded-md bg-indigo-700 py-2 px-3 text-[0.8125rem] font-semibold leading-5 text-indigo-100 hover:bg-indigo-900 hover:text-indigo-100">
                         Save
                     </button>
                 </div>
@@ -24,7 +24,7 @@
                         <p class="my-1">Description (optional)</p>
                         <textarea cols="10" rows="5" class="textarea"></textarea>
 
-                        <div class="products__create__main--media--images mt-2">
+                        <div class="products__create__main--media--images mt-2 lg:w-full">
                             <ul class="products__create__main--media--images--list list-unstyled">
                                 <li class="products__create__main--media--images--item">
                                     <div class="products__create__main--media--images--item--imgWrapper">
