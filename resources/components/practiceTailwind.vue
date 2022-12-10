@@ -1,141 +1,73 @@
 <style>
-/* .flex-container {
-        border: 1px solid black;
-        background-color: darkgray;
-        display: flex;
-        flex-wrap: nowrap;
-        margin: 0 auto;
-        width: 50%;
-        height: 500px;
-    } */
-
-.flex-container {
-    display: flex;
-    border: 1px solid #ccc;
-    margin: 2rem;
-    flex-direction: column;
-}
-
-
-.box {
-    border: 1px solid red;
-    background-color: aquamarine;
-    color: black;
-    font-weight: bold;
-    width: 120px;
-    height: 120px;
-    text-align: center;
-    margin: 5px;
-}
-
-/* .box1 {
-        background-color: lightblue;
-        flex-grow: 1;
-    }
-    .box2 {
-        background-color: lightcoral;
-        flex-grow: 2;
-    }
-    .box3 {
-        background-color: lightgreen;
-        flex-grow: 3;
-    } */
-
-.layout {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-}
-
-.top {
-    border: 1px solid black;
-    width: 100%;
-}
-
-.bottom {
-    border: 1px solid black;
-    width: 100%;
+.chat-container {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
 }
 
-.bottom .square,
-.top .square {
-    width: 100%;
-}
-
-.middle {
-    border: 1px solid black;
-    width: 80%;
-    height: 500px;
+.chat-notification {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0 auto;
+    background-color: azure;
+    color: slategrey;
+    border-radius: 0.6rem;
+    margin-right: 1rem;
+    max-width: 24rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.middle-1, .middle-2, .middle-3 {
-    border: 1px solid yellow;
+.chat-notification-logo-wrapper {
+    height: 100%;
+    min-width: 5rem;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
 }
 
-.middle-2 {
-    justify-content: space-evenly;
+.chat-notification-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1rem;
 }
 
-.square {
-    border: 1px solid maroon;
-    width: 250px;
-    padding: 2.5rem;
-    text-align: center;
-    font-size: 2.5rem;
+.chat-notification-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #404041;
 }
 
-@media only screen and (max-width: 600px) {
-    .middle {
-        height: auto;
-    }
-    .bottom {
-        flex-direction: column;
-    }
+.chat-notification-logo {
+    border-radius: 0.2rem;
+    width: 5rem;
+    margin: 0.5rem;
 }
 </style>
 
 <template>
     <div>
         <h1>Titulo 1</h1>
-        <section class="layout">
-            <div class="top">
-                <div class="square">1</div>
-            </div>
-            <div class="middle">
-                <div class="middle-1">
-                    <div class="square">1</div>
+        <div class="chat-container">
+            <div class="chat-notification">
+                <div class="chat-notification-logo-wrapper">
+                    <img src="https://picsum.photos/200" alt="Logo" class="chat-notification-logo">
                 </div>
-                <div class="middle-2">
-                    <div class="square">2</div>
-                    <div class="square">3</div>
-                </div>
-                <div class="middle-3">
-                    <div class="square">4</div>
+                <div class="chat-notification-content">
+                    <h4 class="chat-notification-title">ChitChat</h4>
+                    <p class="chat-notification-message">You have a new ,m ,cmzx,cmzx,cmzx ajds sjdhf jsdhf jsd hfjsd
+                        fjsd fjaksjjas dkjasdkj asd!</p>
                 </div>
             </div>
 
-            <div class="bottom">
-                <div class="square">5</div>
-                <div class="square">6</div>
-                <div class="square">7</div>
+            <div class="flex max-w-sm bg-slate-500 space-x-4 items-center rounded-xl p-2 shadow-lg hover:bg-slate-700 cursor-pointer">
+                <div class="flex w-16 h-16 shrink-0">
+                    <img src="https://picsum.photos/200" alt="Logo" class="rounded-md">
+                </div>
+                <div class="border-red-100 flex items-start flex-col odd:bg-white">
+                    <h4 class="text-xl text-black">ChitChat</h4>
+                    <p class="text-slate-100">You have a new message!</p>
+                </div>
             </div>
-        </section>
-        <section class="flex-container">
-            <div class="box box1">Box 1</div>
-            <div class="box box2">Box 2</div>
-            <div class="box box3">Box 3</div>
-        </section>
+        </div>
     </div>
 </template>
