@@ -2,3 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .menu-item a{
+        @apply block transition duration-500
+        hover:text-slate-400 transform hover:scale-110 drop-shadow-2xl
+    }
+}

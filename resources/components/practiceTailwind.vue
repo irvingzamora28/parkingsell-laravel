@@ -13,11 +13,10 @@
             </div>
             <nav class="flex w-full h-full border border-red-400">
                 <ul class="flex w-full items-center justify-end text-2xl space-x-4 tracking-wider">
-                    <li><a class="block transition duration-500
-                    hover:text-slate-400 transform hover:scale-110 drop-shadow-2xl" href="#">INICIO</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">FORMACION</a></li>
-                    <li><a href="#">CONTACTO</a></li>
+                    <li class="menu-item"><a class="" href="#">INICIO</a></li>
+                    <li class="menu-item"><a class="" href="#">BLOG</a></li>
+                    <li class="menu-item"><a class="" href="#">FORMACION</a></li>
+                    <li class="menu-item"><a class="" href="#">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>
