@@ -4,8 +4,18 @@
 @tailwind utilities;
 
 @layer components {
+    .menu-item {
+        @apply m-0 flex-1 md:flex-none
+    }
+
     .menu-item a{
         @apply block transition duration-500
         hover:text-slate-400 transform hover:scale-110 drop-shadow-2xl
+        text-sm text-center
+        md:text-xl
+    }
+
+    .text-banner {
+        text-shadow: 2px 2px 1px black;
     }
 }
