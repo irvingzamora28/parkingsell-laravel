@@ -28,5 +28,37 @@
             <h1 class="block text-banner text-center text-slate-50
             font-normal tracking-wider m-7 animate-text-banner text-lg md:text-4xl">TAILWIND PRACTICE</h1>
         </div>
+
+        <div id="cards-container" class="flex flex-nowrap justify-between">
+            <div class="card">
+                <p class="card-icon"> <i class="fas fa-code fa-fw"></i> </p>
+                <h2 class="card-category">DESARROLLO</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis</p>
+            </div>
+
+            <div class="card">
+                <p class="card-icon"> <i class="fas fa-terminal fa-fw"></i> </p>
+                <h2 class="card-category">SISTEMAS OPERATIVOS</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis</p>
+            </div>
+
+            <div class="card">
+                <p class="card-icon"> <i class="fa-solid fa-computer"></i> </p>
+                <h2 class="card-category">HARDWARE</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis</p>
+            </div>
+
+            <div class="card">
+                <p class="card-icon"> <i class="fa-solid fa-network-wired"></i> </p>
+                <h2 class="card-category">REDES E INTERNET</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis</p>
+            </div>
+
+            <div class="card">
+                <p class="card-icon"> <i class="fa-solid fa-database"></i> </p>
+                <h2 class="card-category">REDES E INTERNET</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis</p>
+            </div>
+        </div>
     </section>
 </template>
