@@ -5,14 +5,14 @@
 
 @layer components {
     .menu-item {
-        @apply m-0 flex-1 md:flex-none
+        @apply m-0 flex-1 md:flex-none;
     }
 
-    .menu-item a{
+    .menu-item a {
         @apply block transition duration-500
         hover:text-slate-400 transform hover:scale-110 drop-shadow-2xl
         text-sm text-center
-        md:text-xl
+        md:text-xl;
     }
 
     .text-banner {
@@ -20,13 +20,38 @@
     }
 
     .card {
-        @apply flex-1 h-80 border-2 border-slate-600 shadow-xl
-        bg-slate-50 overflow-hidden m-5 mt-10 px-5
-        cursor-pointer
+        @apply
+        flex-1 lg:h-80 border-2 border-slate-600 shadow-xl cursor-pointer
+        bg-slate-50 overflow-hidden my-4 lg:mt-10 px-5
+        w-full
+
         transition duration-500
+        hover:bg-slate-900
     }
 
     .card-icon {
-        @apply block w-full h-32 text-4xl text-center mt-12 mx-auto
+        @apply block w-full h-16 mt-4 text-4xl text-center mx-auto
+        lg:h-20 lg:mt-12
+        transition duration-300
+        group-hover:text-5xl group-hover:text-slate-100
+        group-hover:lg:text-6xl
+        group-hover:animate-show-card-icon
+
     }
+    .card-category {
+        @apply w-full font-bold text-center text-xs text-cyan-800
+        lg:text-lg
+        transition duration-300
+        group-hover:text-slate-100
+        group-hover:animate-show-card-category
+    }
+    .card-description {
+        @apply text-center text-cyan-600 text-xs
+        transition duration-300
+        mt-2
+        xl:text-xl
+        group-hover:text-slate-100
+        group-hover:animate-show-card-description
+    }
+
 }
