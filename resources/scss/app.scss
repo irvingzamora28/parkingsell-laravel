@@ -54,4 +54,9 @@
         group-hover:animate-show-card-description
     }
 
+    .section-header {
+        @apply flex items-center justify-center bg-title-header w-full h-16 font-extrabold text-4xl tracking-wide leading-10 border
+        shadow-header3D
+    }
+
 }

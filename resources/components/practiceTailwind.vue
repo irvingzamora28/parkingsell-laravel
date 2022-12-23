@@ -66,8 +66,21 @@
         </div>
     </section>
 
-    <main>
-        <aside id="side-section">
+    <main class="container w-11/12 grid grid-flow-row grid-cols-1 gap-12 mx-auto md:flex">
+        <section class="border-4 border-cyan-500 w-full flex-grow p-4">
+            <h2 class="section-header">Ultimos articulos</h2>
+            <article>
+                <div>
+                    <span>Fecha: 10 marz</span>
+                    <span>Categoria: Pruebas</span>
+                </div>
+
+                <h4> <a href="#">Titulo de articulo</a> </h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni id odit facilis eum similique ducimus qui ea itaque vero.</p>
+            </article>
+        </section>
+
+        <aside id="side-section" class="border-4 border-red-500 w-full flex-1 p-4">
             <h3>BUSCAR</h3>
             <div id="search_box">
                 <form action="">
@@ -112,17 +125,6 @@
             <div id="sponsors_box">
             </div>
         </aside>
-        <section>
-            <h2>Ultimos articulos</h2>
-            <article>
-                <div>
-                    <span>Fecha: 10 marz</span>
-                    <span>Categoria: Pruebas</span>
-                </div>
 
-                <h4> <a href="#">Titulo de articulo</a> </h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni id odit facilis eum similique ducimus qui ea itaque vero.</p>
-            </article>
-        </section>
     </main>
 </template>
