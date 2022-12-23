@@ -59,4 +59,27 @@
         shadow-header3D
     }
 
+    .article-item {
+        @apply w-full h-auto border border-slate-400 mt-5 p-3 bg-slate-50 text-slate-800 shadow-md mx-auto
+    }
+
+    .article-data {
+        @apply float-right bg-slate-700 h-10 leading-6 p-2 -m-3 text-slate-50 rounded-bl-lg
+    }
+
+    .article-data span {
+        @apply m-3
+    }
+
+    .article-header {
+        @apply block text-lg m-1
+    }
+
+    .article-header a {
+        @apply font-semibold text-cyan-800 hover:underline
+    }
+
+    .article-description {
+        @apply block my-3 text-base font-sans font-normal
+    }
 }

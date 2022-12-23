@@ -69,14 +69,41 @@
     <main class="container w-11/12 grid grid-flow-row grid-cols-1 gap-12 mx-auto md:flex">
         <section class="border-4 border-cyan-500 w-full flex-grow p-4">
             <h2 class="section-header">Ultimos articulos</h2>
-            <article>
-                <div>
+            <article class="article-item">
+                <div class="article-data">
                     <span>Fecha: 10 marz</span>
                     <span>Categoria: Pruebas</span>
                 </div>
 
-                <h4> <a href="#">Titulo de articulo</a> </h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni id odit facilis eum similique ducimus qui ea itaque vero.</p>
+                <h4 class="article-header"> <a href="#" class="">Titulo de articulo</a> </h4>
+                <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni id odit facilis eum similique ducimus qui ea itaque vero.</p>
+            </article>
+            <article class="article-item">
+                <div class="article-data">
+                    <span>Fecha: 10 marz</span>
+                    <span>Categoria: Pruebas</span>
+                </div>
+
+                <h4 class="article-header"> <a href="#" class="">Titulo de articulo</a> </h4>
+                <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni id odit facilis eum similique ducimus qui ea itaque vero.</p>
+            </article>
+            <article class="article-item">
+                <div class="article-data">
+                    <span>Fecha: 10 marz</span>
+                    <span>Categoria: Pruebas</span>
+                </div>
+
+                <h4 class="article-header"> <a href="#" class="">Titulo de articulo</a> </h4>
+                <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni id odit facilis eum similique ducimus qui ea itaque vero.</p>
+            </article>
+            <article class="article-item">
+                <div class="article-data">
+                    <span>Fecha: 10 marz</span>
+                    <span>Categoria: Pruebas</span>
+                </div>
+
+                <h4 class="article-header"> <a href="#" class="">Titulo de articulo</a> </h4>
+                <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni id odit facilis eum similique ducimus qui ea itaque vero.</p>
             </article>
         </section>
 
